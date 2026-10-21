@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" width="1200" height="780" role="img" aria-labelledby="t d">
+  <title id="t">Semiconductors and AI Hardware Hub: the hardware stack</title>
+  <desc id="d">Five research themes stacked from materials and devices (T1) up to trustworthy hardware/software co-design (T5). An orange band, the signature initiative "Sensory and Computational Fabric for Physical AI", cuts across all five. Three application and testbed themes (A1 to A3) sit beside the stack. Shared UVA and Virginia assets form the foundation.</desc>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,600;0,700;0,800;1,400&amp;display=swap');
+    text { font-family: 'Libre Franklin', 'Franklin Gothic Medium', Arial, sans-serif; }
+    .h1 { font-size: 26px; font-weight: 800; fill: #232D4B; }
+    .sub { font-size: 15px; fill: #4a5470; }
+    .tn { font-size: 15px; font-weight: 800; fill: #E57200; }
+    .tt { font-size: 19px; font-weight: 700; fill: #ffffff; }
+    .tk { font-size: 13px; fill: #e8ebf3; }
+    .tt-d { font-size: 19px; font-weight: 700; fill: #232D4B; }
+    .tk-d { font-size: 13px; fill: #34405f; }
+    .rib { font-size: 12.5px; font-weight: 600; fill: #232D4B; }
+    .ribh { font-size: 13px; font-weight: 800; fill: #ffffff; letter-spacing: .04em; }
+    .an { font-size: 13px; font-weight: 800; fill: #E57200; }
+    .at { font-size: 15px; font-weight: 700; fill: #232D4B; }
+    .ak { font-size: 12.5px; fill: #34405f; }
+    .note { font-size: 12.5px; font-style: italic; fill: #b35900; }
+    .ax { font-size: 13px; font-weight: 700; fill: #4a5470; letter-spacing: .08em; }
+    .fd { font-size: 14px; font-weight: 600; fill: #232D4B; }
+    .fdh { font-size: 12px; font-weight: 800; fill: #E57200; letter-spacing: .08em; }
+  </style>
+
+  <rect width="1200" height="780" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text class="h1" x="80" y="42">Hardware for AI, from atoms to the edge</text>
+  <text class="sub" x="80" y="66">Five research themes span the stack; three testbeds put the hardware to work in the physical world.</text>
+
+  <!-- Axis -->
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8a93ab"/>
+    </marker>
+  </defs>
+  <line x1="52" y1="580" x2="52" y2="104" stroke="#8a93ab" stroke-width="2" marker-end="url(#ah)"/>
+  <text class="ax" transform="translate(40,342) rotate(-90)" text-anchor="middle">MATERIALS  →  SYSTEMS</text>
+
+  <!-- Stack layers (T5 top, T1 bottom). Blue ramp dark to light. -->
+  <g>
+    <rect x="80" y="96" width="720" height="88" rx="8" fill="#232D4B"/>
+    <text class="tn" x="100" y="128">T5</text>
+    <text class="tt" x="134" y="128">Trustworthy HW/SW Co-design &amp; Edge Intelligence</text>
+    <text class="tk" x="134" y="151">Secure architectures &amp; compilers · on-device LLMs</text>
+    <text class="tk" x="134" y="169">Trustworthy, private, efficient ML · federated learning</text>
+  </g>
+  <g>
+    <rect x="80" y="192" width="720" height="88" rx="8" fill="#344066"/>
+    <text class="tn" x="100" y="224">T4</text>
+    <text class="tt" x="134" y="224">AI Compute Architectures &amp; Memory</text>
+    <text class="tk" x="134" y="247">Compute- and processing-in-memory · neuromorphic</text>
+    <text class="tk" x="134" y="265">GPU &amp; memory systems · chiplets &amp; packaging</text>
+  </g>
+  <g>
+    <rect x="80" y="288" width="720" height="88" rx="8" fill="#4a5a86"/>
+    <text class="tn" x="100" y="320">T3</text>
+    <text class="tt" x="134" y="320">Wireless, mmWave/THz &amp; Photonic Links</text>
+    <text class="tk" x="134" y="343">Wakeup &amp; ultra-low-power radios · mmWave/THz · MEMS</text>
+    <text class="tk" x="134" y="361">Integrated &amp; microwave photonics · wireless sensing</text>
+  </g>
+  <g>
+    <rect x="80" y="384" width="720" height="88" rx="8" fill="#c9d0e3"/>
+    <text class="tn" x="100" y="416">T2</text>
+    <text class="tt-d" x="134" y="416">Ultra-Low-Power &amp; Self-Powered Edge Systems</text>
+    <text class="tk-d" x="134" y="439">Nanowatt circuits &amp; SoCs · energy harvesting</text>
+    <text class="tk-d" x="134" y="457">Batteryless sensor nodes · energy-adaptive operation</text>
+  </g>
+  <g>
+    <rect x="80" y="480" width="720" height="88" rx="8" fill="#e3e7f1"/>
+    <text class="tn" x="100" y="512">T1</text>
+    <text class="tt-d" x="134" y="512">Materials &amp; Beyond-CMOS Devices</text>
+    <text class="tk-d" x="134" y="535">2D, ferroelectric &amp; wide-bandgap materials · spintronics</text>
+    <text class="tk-d" x="134" y="553">Beyond-CMOS devices · thermal management · thin-film sensors</text>
+  </g>
+
+  <!-- Signature initiative ribbon, cutting across all layers -->
+  <rect x="626" y="78" width="164" height="500" rx="10" fill="#E57200" opacity="0.18"/>
+  <rect x="626" y="78" width="164" height="500" rx="10" fill="none" stroke="#E57200" stroke-width="2"/>
+  <rect x="626" y="78" width="164" height="14" rx="4" fill="#E57200"/>
+  <g>
+    <rect x="634" y="118" width="148" height="44" rx="6" fill="#fff4ea"/>
+    <text class="rib" x="708" y="136" text-anchor="middle">Distributed &amp;</text>
+    <text class="rib" x="708" y="153" text-anchor="middle">federated learning</text>
+    <rect x="634" y="214" width="148" height="44" rx="6" fill="#fff4ea"/>
+    <text class="rib" x="708" y="241" text-anchor="middle">In-memory ML</text>
+    <rect x="634" y="310" width="148" height="44" rx="6" fill="#fff4ea"/>
+    <text class="rib" x="708" y="328" text-anchor="middle">Ultra-low-power</text>
+    <text class="rib" x="708" y="345" text-anchor="middle">links</text>
+    <rect x="634" y="406" width="148" height="44" rx="6" fill="#fff4ea"/>
+    <text class="rib" x="708" y="424" text-anchor="middle">Nanowatt compute</text>
+    <text class="rib" x="708" y="441" text-anchor="middle">&amp; harvesting</text>
+    <rect x="634" y="502" width="148" height="44" rx="6" fill="#fff4ea"/>
+    <text class="rib" x="708" y="529" text-anchor="middle">Devices &amp; sensors</text>
+  </g>
+
+  <!-- Ribbon label below stack -->
+  <rect x="538" y="586" width="340" height="44" rx="8" fill="#E57200"/>
+  <text class="ribh" x="708" y="604" text-anchor="middle">SIGNATURE INITIATIVE</text>
+  <text x="708" y="622" text-anchor="middle" style="font-size:13px;font-weight:600;fill:#fff">Sensory &amp; Computational Fabric for Physical AI</text>
+
+  <!-- Connector to testbeds -->
+  <path d="M808,110 L826,110 L826,554 L808,554" fill="none" stroke="#8a93ab" stroke-width="2"/>
+  <line x1="826" y1="332" x2="852" y2="332" stroke="#8a93ab" stroke-width="2" marker-end="url(#ah)"/>
+  <text class="ax" x="1012" y="92" text-anchor="middle">APPLICATION &amp; TESTBED THEMES</text>
+
+  <!-- Testbed cards -->
+  <g>
+    <rect x="862" y="104" width="310" height="142" rx="8" fill="#ffffff" stroke="#c9d0e3" stroke-width="1.5"/>
+    <rect x="862" y="104" width="6" height="142" rx="3" fill="#E57200"/>
+    <text class="an" x="884" y="130">A1</text>
+    <text class="at" x="884" y="152">Health, Wearables &amp;</text>
+    <text class="at" x="884" y="171">Human Performance</text>
+    <text class="ak" x="884" y="195">E-textiles &amp; bioelectronics</text>
+    <text class="ak" x="884" y="213">Wearable &amp; in-home sensing</text>
+    <text class="ak" x="884" y="231">Athlete monitoring · rehab</text>
+  </g>
+  <g>
+    <rect x="862" y="258" width="310" height="142" rx="8" fill="#ffffff" stroke="#c9d0e3" stroke-width="1.5"/>
+    <rect x="862" y="258" width="6" height="142" rx="3" fill="#E57200"/>
+    <text class="an" x="884" y="284">A2</text>
+    <text class="at" x="884" y="306">Sensing the Built Environment</text>
+    <text class="ak" x="884" y="331">Sensors in materials &amp; furnishings</text>
+    <text class="ak" x="884" y="349">Responsive, cyber-physical architecture</text>
+    <text class="ak" x="884" y="367">Smart-city &amp; occupancy sensing</text>
+  </g>
+  <g>
+    <rect x="862" y="412" width="310" height="156" rx="8" fill="#ffffff" stroke="#c9d0e3" stroke-width="1.5"/>
+    <rect x="862" y="412" width="6" height="156" rx="3" fill="#E57200"/>
+    <text class="an" x="884" y="438">A3</text>
+    <text class="at" x="884" y="460">Autonomy &amp; Physical AI Interface</text>
+    <text class="ak" x="884" y="485">Low-power perception for robots</text>
+    <text class="ak" x="884" y="503">Assured AI-enabled cyber-physical</text>
+    <text class="ak" x="884" y="521">systems · runtime trust</text>
+    <text class="note" x="884" y="549">Shared with the Physical AI Hub</text>
+  </g>
+
+  <!-- Foundation -->
+  <rect x="80" y="650" width="1092" height="62" rx="8" fill="#f3f4f8" stroke="#c9d0e3" stroke-width="1.5"/>
+  <text class="fdh" x="100" y="674">SHARED FOUNDATION</text>
+  <text class="fd" x="100" y="698">RLPVLSI Group  ·  HPLP Lab  ·  Link Lab  ·  UVA cleanroom &amp; characterization  ·  VAST  ·  VFAB  ·  VMEC chip-design &amp; fabrication networks</text>
+
+  <!-- Footer -->
+  <text x="80" y="752" style="font-size:12px;fill:#6b7390">UVA Research Hub · Semiconductors and AI Hardware · Co-chairs Benton Calhoun &amp; Mircea Stan</text>
+  <text x="1172" y="752" text-anchor="end" style="font-size:12px;fill:#6b7390">DRAFT 2026-09-24</text>
+</svg>
