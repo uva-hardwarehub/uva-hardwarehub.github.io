@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- Website deployment refresh -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -13,6 +12,7 @@
     --blue: #232D4B; --blue-2: #344066; --blue-3: #4a5a86; --tint: #e3e7f1; --tint-2: #f3f4f8;
     --orange: #E57200; --orange-dk: #b35900; --orange-tint: #fff4ea;
     --ink: #1f2638; --muted: #4a5470; --line: #c9d0e3; --bg: #ffffff;
+    --c1: #7a6a9e; --c2: #E57200; --c3: #0088c2; --c4: #232D4B; --c5: #c8325a;
     --maxw: 1120px;
   }
   * { box-sizing: border-box; }
@@ -21,14 +21,13 @@
   a { color: var(--blue-3); }
   a:hover { color: var(--orange-dk); }
   .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 16px; }
-  .draft { background: #fff1c2; color: #6b4b00; font-size: 14px; text-align: center; padding: 6px 16px; border-bottom: 1px solid #f0d27a; }
-  mark { background: #fff1c2; color: inherit; padding: 0 3px; border-radius: 3px; }
 
   /* Header */
   header.site { background: var(--blue); color: #fff; }
   .topbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 16px; max-width: var(--maxw); margin: 0 auto; flex-wrap: wrap; }
-  .lockup { display: flex; align-items: center; gap: 12px; color: #fff; text-decoration: none; }
-  .lockup .ph { border: 1.5px dashed rgba(255,255,255,.55); border-radius: 4px; padding: 6px 10px; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; }
+  .lockup { display: flex; align-items: center; gap: 14px; color: #fff; text-decoration: none; }
+  .lockup .logo { background: #fff; border-radius: 5px; padding: 5px 8px; display: flex; }
+  .lockup .logo img { height: 38px; width: auto; display: block; }
   .lockup strong { font-size: 16px; }
   nav.main { display: flex; gap: 18px; flex-wrap: wrap; font-size: 15px; font-weight: 600; }
   nav.main a { color: #fff; text-decoration: none; opacity: .9; }
@@ -51,6 +50,7 @@
   h2 { font-size: clamp(26px, 3.2vw, 34px); color: var(--blue); margin: 0 0 8px; line-height: 1.2; }
   h2 + .kicker { color: var(--muted); margin: 0 0 28px; max-width: 760px; }
   h3 { color: var(--blue); margin: 0 0 6px; font-size: 19px; line-height: 1.3; }
+  section .eyebrow { color: var(--orange-dk); }
 
   .two { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: start; }
   .callout { background: #fff; border-left: 5px solid var(--orange); padding: 20px 22px; border-radius: 6px; box-shadow: 0 1px 0 var(--line); }
@@ -65,9 +65,25 @@
   .card { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 20px 20px 18px; display: flex; flex-direction: column; }
   .card .num { font-weight: 800; color: var(--orange); font-size: 14px; letter-spacing: .06em; }
   .card p { margin: 6px 0 12px; color: var(--muted); font-size: 15.5px; }
-  .card .lead { margin-top: auto; font-size: 14px; color: var(--muted); border-top: 1px solid var(--tint); padding-top: 10px; }
   .card.app { border-left: 5px solid var(--orange); }
   .subhead { font-size: 13px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 36px 0 14px; }
+
+  /* Impact */
+  .limits { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; margin: 0 0 32px; }
+  .limits div { background: #fff; border: 1px solid var(--line); border-top: 4px solid var(--orange); border-radius: 8px; padding: 12px 16px; color: var(--muted); font-size: 15.5px; }
+  .limits b { display: block; color: var(--blue); font-size: 17px; margin-bottom: 2px; }
+  figure.map { margin: 0 0 32px; background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 16px 16px 10px; }
+  figure.map .scroll { overflow-x: auto; }
+  figure.map svg { width: 100%; min-width: 620px; height: auto; display: block; }
+  figure.map figcaption { font-size: 14px; color: var(--muted); padding: 8px 4px 0; }
+  .outcomes { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 18px; }
+  .oc .k { font-size: 13px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--orange-dk); }
+  .oc p { margin: 4px 0 8px; font-size: 15.5px; color: var(--ink); }
+  .oc p b { color: var(--blue); }
+  .oc p.today { color: var(--muted); }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 4px; }
+  .chip { font-size: 12.5px; font-weight: 700; padding: 2px 10px; border-radius: 12px; color: #fff; white-space: nowrap; }
+  .chip.c1 { background: var(--c1); } .chip.c2 { background: var(--c2); color: #2a1600; } .chip.c3 { background: var(--c3); } .chip.c4 { background: var(--c4); } .chip.c5 { background: var(--c5); }
 
   .signature { background: var(--blue); color: #fff; border-radius: 12px; padding: 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
   .signature h2 { color: #fff; }
@@ -94,6 +110,8 @@
 
   .join { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 18px; }
   .join .card h3 { font-size: 18px; }
+  .soon { display: inline-block; align-self: start; margin-top: auto; font-size: 13px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); background: var(--tint); padding: 4px 10px; border-radius: 4px; }
+  .card .num .soon { margin-left: 8px; vertical-align: 1px; }
 
   footer.site { background: var(--blue); color: #cfd5e6; padding: 36px 0; font-size: 14.5px; }
   footer.site a { color: #fff; }
@@ -104,20 +122,22 @@
     .signature { padding: 24px; }
     nav.main { gap: 12px; font-size: 14px; }
   }
+  @media (max-width: 420px) {
+    .outcomes { grid-template-columns: 1fr; }
+  }
 </style>
 </head>
 <body>
 
-<div class="draft">DRAFT v0.1 (2026-09-24): not for publication. Highlighted items need confirmation.</div>
-
 <header class="site">
   <div class="topbar">
     <a class="lockup" href="#top">
-      <span class="ph">UVA logo lockup</span>
+      <span class="logo"><img src="uva_logo.png" alt="University of Virginia"></span>
       <strong>Semiconductors and AI Hardware Hub</strong>
     </a>
     <nav class="main" aria-label="Main">
       <a href="#about">About</a>
+      <a href="#impact">Impact</a>
       <a href="#themes">Themes</a>
       <a href="#initiative">Initiative</a>
       <a href="#facilities">Facilities</a>
@@ -137,7 +157,7 @@
       <p class="lede">We connect UVA researchers who build the hardware AI runs on: new materials and devices, ultra-low-power circuits, wireless and photonic links, compute architectures, and trustworthy hardware/software systems. Our focus is energy-efficient, secure AI in the datacenter and at the far edge, including batteryless sensors that connect AI to the physical world.</p>
       <div class="btns">
         <a class="btn primary" href="#join">Join the hub</a>
-        <a class="btn ghost" href="#themes">Explore our themes</a>
+        <a class="btn ghost" href="#impact">See our impact</a>
       </div>
     </div>
   </div>
@@ -147,7 +167,7 @@
       <div>
         <h2>About the hub</h2>
         <p>AI's progress is now limited by hardware: by the energy it takes to compute and move data, by the trustworthiness of the chips it runs on, and by how much of the physical world it can sense. The Semiconductors and AI Hardware Hub, one of the University of Virginia's Research Hubs, brings together researchers who work on these limits at every level of the stack.</p>
-        <p>Five research themes run from materials to systems. Three testbed themes put that hardware to work in health and wearables, in the built environment, and in autonomy, the last together with UVA's <a href="https://research.virginia.edu/initiatives/uva-research-hubs">Physical AI Hub</a>. Photonics, detector and materials work is coordinated with the Quantum Photonics, Materials and Algorithms Hub. The hub builds teams for major federal and industry programs, connects faculty with Virginia's VAST, VFAB and VMEC networks, and trains the next generation of chip designers.</p>
+        <p>Five research themes run from materials to systems. Three testbed themes put that hardware to work in health and wearables, in the built environment, and in autonomy, the last together with UVA's <a href="https://research.virginia.edu/initiatives/uva-research-hubs">Physical AI Hub</a>. Photonics, detector and materials work is coordinated with the <a href="https://research.virginia.edu/initiatives/uva-research-hubs">Quantum Photonics, Materials and Algorithms Hub</a>. The hub builds teams for major federal and industry programs, connects faculty with Virginia's VAST, VFAB and VMEC networks, and trains the next generation of chip designers.</p>
       </div>
       <div class="callout">
         <strong>Why now</strong>
@@ -161,7 +181,144 @@
     </div>
   </section>
 
-  <section id="themes" class="alt">
+  <section id="impact" class="alt">
+    <div class="wrap">
+      <p class="eyebrow">Impact</p>
+      <h2>Putting AI to work in the real world</h2>
+      <p class="kicker">AI's next leap will not come from software alone. AI is running into physical limits: the power it draws, the reach of its sensors into the real world, and the trust we can place in the chips beneath it. Every one of these is a hardware problem. The hub brings together the researchers who solve them and turns that work into outcomes in health, security, infrastructure and the economy.</p>
+
+      <div class="limits">
+        <div><b>Energy</b>AI's power demand is outpacing the grid that feeds it.</div>
+        <div><b>Reach</b>AI can't act on what it can't sense, and most of the world has no sensors.</div>
+        <div><b>Trust</b>Defense, health and infrastructure need hardware that is secure by design.</div>
+        <div><b>Talent</b>The nation needs a new generation of chip designers.</div>
+      </div>
+
+      <h3>From what we build to what it changes</h3>
+      <figure class="map">
+        <div class="scroll">
+        <svg viewBox="0 0 760 336" role="img" aria-label="Five hub capabilities on the left connect to six real-world outcomes on the right.">
+          <style>
+            text { font-family: 'Libre Franklin', 'Franklin Gothic Book', Arial, sans-serif; }
+            .hd { font-size: 9.5px; font-weight: 800; letter-spacing: .12em; fill: #4a5470; }
+            .lt { font-size: 13px; font-weight: 700; fill: #232D4B; }
+            .ls { font-size: 10.5px; fill: #4a5470; }
+            .rk { font-size: 8.5px; font-weight: 800; letter-spacing: .12em; fill: #E57200; }
+            .rt { font-size: 12px; font-weight: 700; fill: #232D4B; }
+            .links path { fill: none; stroke-width: 2.2; opacity: .8; }
+          </style>
+          <text class="hd" x="0" y="18">WHAT THE HUB BUILDS</text>
+          <text class="hd" x="760" y="18" text-anchor="end">WHAT IT CHANGES</text>
+
+          <g class="links">
+            <path d="M262,51.0 C372,51.0 368,149.2 478,149.2" stroke="#7a6a9e"/>
+            <path d="M262,59.0 C372,59.0 368,253.9 478,253.9" stroke="#7a6a9e"/>
+            <path d="M262,67.0 C372,67.0 368,301.0 478,301.0" stroke="#7a6a9e"/>
+            <path d="M262,113.0 C372,113.0 368,48.0 478,48.0" stroke="#E57200"/>
+            <path d="M262,121.0 C372,121.0 368,98.6 478,98.6" stroke="#E57200"/>
+            <path d="M262,129.0 C372,129.0 368,156.2 478,156.2" stroke="#E57200"/>
+            <path d="M262,171.0 C372,171.0 368,55.0 478,55.0" stroke="#0088c2"/>
+            <path d="M262,179.0 C372,179.0 368,105.6 478,105.6" stroke="#0088c2"/>
+            <path d="M262,187.0 C372,187.0 368,163.2 478,163.2" stroke="#0088c2"/>
+            <path d="M262,195.0 C372,195.0 368,199.8 478,199.8" stroke="#0088c2"/>
+            <path d="M262,237.0 C372,237.0 368,206.8 478,206.8" stroke="#232D4B"/>
+            <path d="M262,245.0 C372,245.0 368,260.9 478,260.9" stroke="#232D4B"/>
+            <path d="M262,253.0 C372,253.0 368,308.0 478,308.0" stroke="#232D4B"/>
+            <path d="M262,295.0 C372,295.0 368,62.0 478,62.0" stroke="#c8325a"/>
+            <path d="M262,303.0 C372,303.0 368,112.6 478,112.6" stroke="#c8325a"/>
+            <path d="M262,311.0 C372,311.0 368,213.8 478,213.8" stroke="#c8325a"/>
+            <path d="M262,319.0 C372,319.0 368,315.0 478,315.0" stroke="#c8325a"/>
+          </g>
+
+          <!-- Capabilities (plain-language versions of themes T1–T5) -->
+          <g>
+            <rect x="0" y="34" width="262" height="50" rx="7" fill="#f3f4f8" stroke="#c9d0e3"/>
+            <circle cx="16" cy="59" r="6" fill="#7a6a9e"/>
+            <text class="lt" x="30" y="55">New materials &amp; devices</text>
+            <text class="ls" x="30" y="72">Faster, cooler, denser chips</text>
+
+            <rect x="0" y="96" width="262" height="50" rx="7" fill="#fff4ea" stroke="#E57200"/>
+            <circle cx="16" cy="121" r="6" fill="#E57200"/>
+            <text class="lt" x="30" y="117">Battery-free electronics</text>
+            <text class="ls" x="30" y="134">Runs for years on light, heat or motion</text>
+
+            <rect x="0" y="158" width="262" height="50" rx="7" fill="#f3f4f8" stroke="#c9d0e3"/>
+            <circle cx="16" cy="183" r="6" fill="#0088c2"/>
+            <text class="lt" x="30" y="179">Wireless &amp; optical links</text>
+            <text class="ls" x="30" y="196">Moves data on a sip of power</text>
+
+            <rect x="0" y="220" width="262" height="50" rx="7" fill="#f3f4f8" stroke="#c9d0e3"/>
+            <circle cx="16" cy="245" r="6" fill="#232D4B"/>
+            <text class="lt" x="30" y="241">Energy-efficient AI chips</text>
+            <text class="ls" x="30" y="258">More AI per watt, cloud to device</text>
+
+            <rect x="0" y="282" width="262" height="50" rx="7" fill="#f3f4f8" stroke="#c9d0e3"/>
+            <circle cx="16" cy="307" r="6" fill="#c8325a"/>
+            <text class="lt" x="30" y="303">Trustworthy AI hardware</text>
+            <text class="ls" x="30" y="320">Secure, private and assured by design</text>
+          </g>
+
+          <!-- Outcomes -->
+          <g>
+            <rect x="478" y="34" width="282" height="42" rx="7" fill="#ffffff" stroke="#c9d0e3"/>
+            <text class="rk" x="492" y="50">HEALTH</text>
+            <text class="rt" x="492" y="67">Continuous care, outside the clinic</text>
+
+            <rect x="478" y="84.6" width="282" height="42" rx="7" fill="#ffffff" stroke="#c9d0e3"/>
+            <text class="rk" x="492" y="100.6">NATIONAL SECURITY</text>
+            <text class="rt" x="492" y="117.6">Persistent sensing at the tactical edge</text>
+
+            <rect x="478" y="135.2" width="282" height="42" rx="7" fill="#ffffff" stroke="#c9d0e3"/>
+            <text class="rk" x="492" y="151.2">INFRASTRUCTURE</text>
+            <text class="rt" x="492" y="168.2">Buildings and bridges that self-report</text>
+
+            <rect x="478" y="185.8" width="282" height="42" rx="7" fill="#ffffff" stroke="#c9d0e3"/>
+            <text class="rk" x="492" y="201.8">AUTONOMY</text>
+            <text class="rt" x="492" y="218.8">Robots and vehicles that think on board</text>
+
+            <rect x="478" y="236.4" width="282" height="42" rx="7" fill="#ffffff" stroke="#c9d0e3"/>
+            <text class="rk" x="492" y="252.4">ENERGY</text>
+            <text class="rt" x="492" y="269.4">AI growth without straining the grid</text>
+
+            <rect x="478" y="287" width="282" height="42" rx="7" fill="#ffffff" stroke="#c9d0e3"/>
+            <text class="rk" x="492" y="303">COMPETITIVENESS</text>
+            <text class="rt" x="492" y="320">Domestic chips, skilled workforce</text>
+          </g>
+        </svg>
+        </div>
+        <figcaption>Each line is a direct contribution. Most outcomes need three capabilities working together, which is why the hub organizes researchers across the whole hardware stack instead of one specialty at a time.</figcaption>
+      </figure>
+
+      <div class="outcomes">
+        <article class="card oc"><span class="k">Health</span><h3>Continuous care, outside the clinic</h3>
+          <p class="today"><b>Today:</b> Wearables need constant charging and stream raw data to the cloud. Monitoring stops when the battery does.</p>
+          <p><b>With the hub:</b> Battery-free patches and smart textiles that track vital signs for years, analyze data on the body and keep it private.</p>
+          <div class="chips"><span class="chip c2">Battery-free</span><span class="chip c3">Efficient links</span><span class="chip c5">Trustworthy</span></div></article>
+        <article class="card oc"><span class="k">National security</span><h3>Persistent sensing at the tactical edge</h3>
+          <p class="today"><b>Today:</b> Field sensors need battery resupply, and their transmissions can give away their position.</p>
+          <p><b>With the hub:</b> Long-lived, low-signature sensors and secure on-board AI that keep working where power and networks don't reach.</p>
+          <div class="chips"><span class="chip c2">Battery-free</span><span class="chip c3">Efficient links</span><span class="chip c5">Trustworthy</span></div></article>
+        <article class="card oc"><span class="k">Infrastructure</span><h3>Buildings and bridges that self-report</h3>
+          <p class="today"><b>Today:</b> Structures and equipment are inspected periodically, so problems surface late and repairs cost more.</p>
+          <p><b>With the hub:</b> Sensors built into materials and machines that report condition continuously for decades, with no wiring or battery swaps.</p>
+          <div class="chips"><span class="chip c1">New materials</span><span class="chip c2">Battery-free</span><span class="chip c3">Efficient links</span></div></article>
+        <article class="card oc"><span class="k">Autonomy</span><h3>Robots and vehicles that think on board</h3>
+          <p class="today"><b>Today:</b> Drones and robots carry heavy batteries and lean on cloud links to see and decide.</p>
+          <p><b>With the hub:</b> Lightweight, efficient on-board perception and decision-making that is assured and works offline. Built with UVA's Physical AI Hub.</p>
+          <div class="chips"><span class="chip c4">Efficient AI chips</span><span class="chip c3">Efficient links</span><span class="chip c5">Trustworthy</span></div></article>
+        <article class="card oc"><span class="k">Energy</span><h3>AI growth without straining the grid</h3>
+          <p class="today"><b>Today:</b> Datacenter demand for AI is rising faster than new power can come online.</p>
+          <p><b>With the hub:</b> Chips and memory that deliver far more AI per watt, from the datacenter to the smallest device.</p>
+          <div class="chips"><span class="chip c4">Efficient AI chips</span><span class="chip c1">New materials</span></div></article>
+        <article class="card oc"><span class="k">Competitiveness</span><h3>Domestic chips, skilled workforce</h3>
+          <p class="today"><b>Today:</b> The U.S. depends on overseas chipmaking and is short of chip designers.</p>
+          <p><b>With the hub:</b> Trusted, U.S.-designed chip innovation, and students who design and build real chips through Virginia's statewide chip networks.</p>
+          <div class="chips"><span class="chip c1">New materials</span><span class="chip c4">Efficient AI chips</span><span class="chip c5">Trustworthy</span></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="themes">
     <div class="wrap">
       <h2>Research themes</h2>
       <p class="kicker">Five themes follow the hardware stack from materials to systems. Three testbeds show that hardware working in real settings.</p>
@@ -174,33 +331,25 @@
       <p class="subhead">Core hardware stack</p>
       <div class="grid">
         <article class="card"><span class="num">T1</span><h3>Materials and Beyond-CMOS Devices</h3>
-          <p>2D, ferroelectric and wide-bandgap materials; oscillator and Ising devices; spintronics; thermal transport; flexible and thin-film sensors.</p>
-          <span class="lead">Theme lead: <mark>to be named</mark></span></article>
+          <p>2D, ferroelectric and wide-bandgap materials; oscillator and Ising devices; spintronics; thermal transport; flexible and thin-film sensors.</p></article>
         <article class="card"><span class="num">T2</span><h3>Ultra-Low-Power and Self-Powered Edge Systems</h3>
-          <p>Nanowatt circuits and SoCs, energy harvesting, batteryless sensor nodes, energy-adaptive operation, analog/mixed-signal front ends.</p>
-          <span class="lead">Theme lead: <mark>to be named</mark></span></article>
+          <p>Nanowatt circuits and SoCs, energy harvesting, batteryless sensor nodes, energy-adaptive operation, analog/mixed-signal front ends.</p></article>
         <article class="card"><span class="num">T3</span><h3>Wireless, mmWave/THz and Photonic Links and Sensing</h3>
-          <p>Wakeup and ultra-low-power radios, mmWave/THz circuits and MEMS, integrated and microwave photonics, photodetectors, wireless sensing.</p>
-          <span class="lead">Theme lead: <mark>to be named</mark></span></article>
+          <p>Wakeup and ultra-low-power radios, mmWave/THz circuits and MEMS, integrated and microwave photonics, photodetectors, wireless sensing.</p></article>
         <article class="card"><span class="num">T4</span><h3>AI Compute Architectures and Memory</h3>
-          <p>Compute- and processing-in-memory, neuromorphic accelerators, GPU and memory systems, architectures under power and thermal limits, chiplets and packaging.</p>
-          <span class="lead">Theme lead: <mark>to be named</mark></span></article>
+          <p>Compute- and processing-in-memory, neuromorphic accelerators, GPU and memory systems, architectures under power and thermal limits, chiplets and packaging.</p></article>
         <article class="card"><span class="num">T5</span><h3>Trustworthy HW/SW Co-design and Edge Intelligence</h3>
-          <p>Secure architectures and compilers, on-device LLMs, trustworthy, private and efficient ML, federated and distributed learning at the edge.</p>
-          <span class="lead">Theme lead: <mark>to be named</mark></span></article>
+          <p>Secure architectures and compilers, on-device LLMs, trustworthy, private and efficient ML, federated and distributed learning at the edge.</p></article>
       </div>
 
       <p class="subhead">Application and testbed themes</p>
       <div class="grid">
         <article class="card app"><span class="num">A1</span><h3>Health, Wearables and Human Performance</h3>
-          <p>E-textiles and bioelectronics, wearable and in-home physiological sensing, athlete monitoring, concussion and rehabilitation.</p>
-          <span class="lead">Theme lead: <mark>to be named</mark></span></article>
+          <p>E-textiles and bioelectronics, wearable and in-home physiological sensing, athlete monitoring, concussion and rehabilitation.</p></article>
         <article class="card app"><span class="num">A2</span><h3>Sensing the Built Environment</h3>
-          <p>Sensors in materials, furnishings and landscapes; responsive, cyber-physical architecture; smart-city and occupancy sensing.</p>
-          <span class="lead">Theme lead: <mark>to be named</mark></span></article>
+          <p>Sensors in materials, furnishings and landscapes; responsive, cyber-physical architecture; smart-city and occupancy sensing.</p></article>
         <article class="card app"><span class="num">A3</span><h3>Autonomy and Physical AI Interface</h3>
-          <p>Low-power perception and compute for robots and vehicles; assurance of AI-enabled cyber-physical systems. Shared with the Physical AI Hub.</p>
-          <span class="lead">Theme lead: <mark>to be named, jointly with the Physical AI Hub</mark></span></article>
+          <p>Low-power perception and compute for robots and vehicles; assurance of AI-enabled cyber-physical systems. Shared with the Physical AI Hub.</p></article>
       </div>
     </div>
   </section>
@@ -211,15 +360,15 @@
         <div>
           <p class="eyebrow">Signature initiative</p>
           <h2>The Sensory and Computational Fabric for Physical AI</h2>
-          <p>Imagine batteryless, networked nodes built into textiles, structures and rooms, powered only by ambient heat, light, motion or radio waves. Together they act as the senses of large AI models: they filter, compress and learn locally, and send grounded signal upstream.</p>
-          <p>The initiative draws on every research theme and is demonstrated in our health and built-environment testbeds, for example with networks of chiplets woven into fabric.</p>
+          <p>Imagine energy-autonomous nodes built into textiles, bodies, structures and machines. They sense with new materials and devices, compute and learn in nanowatt, in-memory hardware, and link over ultra-low-power radio and photonic channels, with security built in. Together they act as the senses of large AI models: they filter, compress and learn locally, and send grounded signal upstream.</p>
+          <p>The initiative draws on every research theme and is demonstrated in all three testbeds: chiplet networks woven into fabric for health and sport, instrumented rooms and landscapes, and low-power perception for autonomous systems.</p>
         </div>
         <ul class="layers" aria-label="What each theme contributes">
-          <li><b>T5</b>Distributed and federated learning across the fabric</li>
-          <li><b>T4</b>Machine learning in memory, at nanowatts</li>
-          <li><b>T3</b>Ultra-low-power links and wakeup radios</li>
+          <li><b>T5</b>Security built into the hardware; learning split across nodes</li>
+          <li><b>T4</b>In-memory, neuromorphic and chiplet-based AI compute</li>
+          <li><b>T3</b>Wakeup radios, mmWave/THz sensing and photonic links</li>
           <li><b>T2</b>Nanowatt compute and energy harvesting</li>
-          <li><b>T1</b>New devices and sensing materials</li>
+          <li><b>T1</b>New sensing materials, ferroelectric and beyond-CMOS devices</li>
         </ul>
       </div>
     </div>
@@ -228,12 +377,13 @@
   <section class="alt">
     <div class="wrap">
       <h2>Why UVA</h2>
-      <p class="kicker">Two decades of leadership in the hardware that makes edge AI possible. <mark>All items to be verified before publication.</mark></p>
+      <p class="kicker">Proven leadership across the stack, from materials and devices to photonics, compute and systems.</p>
       <div class="proof">
-        <div><strong>First self-powered sensor node</strong><span>UVA researchers built the first fully integrated self-powered wireless sensor node (2012).</span></div>
-        <div><strong>Nanowatt computing</strong><span>A complete RISC-V system-on-chip running at about 3 nW, and chips that use over 10,000× less power than conventional ones.</span></div>
-        <div><strong>In the 5G standard</strong><span>UVA wakeup-radio research led to a low-power wakeup signal in the 5G standard.</span></div>
-        <div><strong>Device-to-system depth</strong><span>Expertise spanning materials, devices, circuits, architectures, security and ML, in one place.</span></div>
+        <div><strong>Self-powered sensor nodes</strong><span>UVA researchers built one of the first fully integrated self-powered wireless sensor nodes (2012).</span></div>
+        <div><strong>In the 5G standard</strong><span>UVA wakeup-radio research led to a low-power wakeup signal in today's 5G standard.</span></div>
+        <div><strong>New materials and devices</strong><span>Ferroelectric hafnium-zirconium-oxide memory films, oscillator-based Ising machines, and optical measurement of heat flow in nanoscale chip materials.</span></div>
+        <div><strong>Photonics and THz</strong><span>Superconducting THz detectors for radio astronomy, and single-photon and high-speed photodetectors from award-winning photonics groups.</span></div>
+        <div><strong>AI compute and architecture</strong><span>Led a national center on processing-in-memory; UVA architecture tools such as the HotSpot thermal model and Rodinia GPU benchmarks are used across the field.</span></div>
       </div>
     </div>
   </section>
@@ -241,16 +391,17 @@
   <section id="facilities">
     <div class="wrap">
       <h2>Facilities and partners</h2>
-      <p class="kicker">Hub members draw on shared UVA facilities and statewide semiconductor networks. <mark>Descriptions to be confirmed with facility owners.</mark></p>
+      <p class="kicker">Hub members draw on shared UVA facilities, statewide semiconductor networks and partner hubs.</p>
       <div class="tablewrap">
         <table class="fac">
           <thead><tr><th>Resource</th><th>What it offers</th></tr></thead>
           <tbody>
             <tr><td><b><a href="https://engineering.virginia.edu/labs-groups/robust-low-power-vlsi">RLPVLSI Group</a></b> (Robust Low Power VLSI)</td><td>Ultra-low-power and subthreshold circuits, energy harvesting, and batteryless, self-powered sensor SoCs</td></tr>
-            <tr><td><b>HPLP Lab</b> (High-Performance Low-Power)</td><td>Low-power VLSI, processing-in-memory, and AI hardware architectures</td></tr>
-            <tr><td><b>Link Lab</b></td><td>Cyber-physical systems research, testbeds and cross-disciplinary teams</td></tr>
-            <tr><td><b>UVA cleanroom and characterization facilities</b></td><td>Micro- and nanofabrication, and materials and device characterization</td></tr>
-            <tr><td><b>VAST · VFAB · VMEC</b></td><td>Virginia semiconductor, fabrication and microelectronics networks for chip design, tapeouts and workforce training</td></tr>
+            <tr><td><b><a href="https://engineering.virginia.edu/labs-groups/high-performance-low-power-lab">HPLP Lab</a></b> (High-Performance Low-Power)</td><td>Low-power VLSI, processing-in-memory, and AI hardware architectures</td></tr>
+            <tr><td><b><a href="https://engineering.virginia.edu/labs-groups/link-lab">Link Lab</a></b></td><td>Cyber-physical systems research, testbeds and cross-disciplinary teams</td></tr>
+            <tr><td><b>UVA cleanroom and characterization facilities:</b> <a href="https://engineering.virginia.edu/facilities-equipment/innovations-fabrication">Innovations in Fabrication (IFAB)</a> · <a href="https://engineering.virginia.edu/facilities-equipment/nanoscale-materials-characterization-facility">Nanoscale Materials Characterization Facility (NMCF)</a></td><td>Micro- and nanofabrication, and materials and device characterization</td></tr>
+            <tr><td><b><a href="https://vast-alliance.vt.edu/">VAST</a> · <a href="https://vast-alliance.vt.edu/vfab.html">VFAB</a> · <a href="https://vmecteam.org/">VMEC</a></b></td><td>Virginia semiconductor, fabrication and microelectronics networks for chip design, tapeouts and workforce training</td></tr>
+            <tr><td><b>Partner hubs:</b> <a href="https://research.virginia.edu/initiatives/uva-research-hubs">Physical AI Hub: Intelligence That Moves</a> · <a href="https://research.virginia.edu/initiatives/uva-research-hubs">Quantum Photonics, Materials and Algorithms</a></td><td>Fellow UVA Research Hubs: joint work on autonomy and robotics, and on photonics, detectors and materials</td></tr>
           </tbody>
         </table>
       </div>
@@ -260,9 +411,9 @@
   <section id="people" class="alt">
     <div class="wrap">
       <h2>People</h2>
-      <p class="kicker">The hub is faculty-led and open to researchers across Grounds. A member directory by theme will appear here as members opt in.</p>
+      <p class="kicker">The hub is faculty-led and open to researchers across Grounds. Member directory coming soon.</p>
       <div class="people">
-        <div class="person"><div class="avatar">BC</div><div><strong>Benton Calhoun</strong><small>Co-chair · Professor, Electrical and Computer Engineering</small><small><a href="mailto:bcalhoun@virginia.edu">bcalhoun@virginia.edu</a></small></div></div>
+        <div class="person"><div class="avatar">BC</div><div><strong>Ben Calhoun</strong><small>Co-chair · Professor, Electrical and Computer Engineering</small><small><a href="mailto:bcalhoun@virginia.edu">bcalhoun@virginia.edu</a></small></div></div>
         <div class="person"><div class="avatar">MS</div><div><strong>Mircea Stan</strong><small>Co-chair · VMEC Professor, Electrical and Computer Engineering</small><small><a href="mailto:mircea@virginia.edu">mircea@virginia.edu</a></small></div></div>
       </div>
     </div>
@@ -271,9 +422,9 @@
   <section id="events">
     <div class="wrap">
       <h2>Seminars and events</h2>
-      <p class="kicker">A regular hub seminar series is launching <mark>[term — confirm]</mark>. Join the mailing list for announcements.</p>
+      <p class="kicker">News and events from the hub.</p>
       <div class="grid">
-        <article class="card"><span class="num">SEMINAR SERIES</span><h3>AI Hardware Seminar <mark>[name — confirm]</mark></h3><p>Talks by hub members and visitors on devices, circuits, architectures and edge AI. Schedule to be posted.</p></article>
+        <article class="card"><span class="num">SEMINAR SERIES<span class="soon">Coming soon</span></span><h3>AI Hardware Seminar Series</h3><p>Talks by hub members and visitors on devices, circuits, architectures and edge AI.</p></article>
         <article class="card"><span class="num">NEWS</span><h3>Hub launch</h3><p>The Semiconductors and AI Hardware Hub was named one of UVA's first Research Hubs in March 2026.</p></article>
       </div>
     </div>
@@ -284,10 +435,10 @@
       <h2>Get involved</h2>
       <p class="kicker">Faculty, postdocs and students at every career stage are welcome.</p>
       <div class="join">
-        <article class="card"><h3>UVA faculty and researchers</h3><p>Find collaborators, join proposal teams and present in the seminar series.</p><a class="btn primary" href="#" style="align-self:start">Join form <mark style="background:transparent;color:#fff">[link]</mark></a></article>
-        <article class="card"><h3>Sponsors and program managers</h3><p>One point of contact for a device-to-system AI hardware team.</p><a href="mailto:">Email the hub <mark>[mailbox]</mark></a></article>
-        <article class="card"><h3>Industry</h3><p>Explore joint projects, student engagement and Virginia's semiconductor ecosystem.</p><a href="mailto:">Talk to the co-chairs</a></article>
-        <article class="card"><h3>Mailing list</h3><p>Seminar announcements, funding calls and hub news.</p><a href="#">Subscribe <mark>[list link]</mark></a></article>
+        <article class="card"><h3>UVA faculty and researchers</h3><p>Find collaborators, join proposal teams and present in the seminar series.</p><span class="soon">Coming soon</span></article>
+        <article class="card"><h3>Sponsors and program managers</h3><p>One point of contact for a device-to-system AI hardware team.</p><span class="soon">Coming soon</span></article>
+        <article class="card"><h3>Industry</h3><p>Explore joint projects, student engagement and Virginia's semiconductor ecosystem.</p><a href="mailto:bcalhoun@virginia.edu,mircea@virginia.edu?subject=Semiconductors%20and%20AI%20Hardware%20Hub" style="margin-top:auto">Talk to the co-chairs</a></article>
+        <article class="card"><h3>Mailing list</h3><p>Seminar announcements, funding calls and hub news.</p><span class="soon">Coming soon</span></article>
       </div>
     </div>
   </section>
@@ -295,8 +446,8 @@
 
 <footer class="site">
   <div class="wrap foot">
-    <div><strong style="color:#fff">Semiconductors and AI Hardware Hub</strong><br>University of Virginia · School of Engineering and Applied Science<br>Contact: <mark style="color:var(--ink)">[hub mailbox]</mark></div>
-    <div>Part of the <a href="https://research.virginia.edu/initiatives/uva-research-hubs">UVA Research Hubs</a> program<br>Partner hubs: Physical AI Hub: Intelligence That Moves · Quantum Photonics, Materials and Algorithms</div>
+    <div><strong style="color:#fff">Semiconductors and AI Hardware Hub</strong><br>University of Virginia · School of Engineering and Applied Science<br>Contact: <a href="mailto:bcalhoun@virginia.edu,mircea@virginia.edu?subject=Semiconductors%20and%20AI%20Hardware%20Hub">Email the co-chairs</a></div>
+    <div>Part of the <a href="https://research.virginia.edu/initiatives/uva-research-hubs">UVA Research Hubs</a> program<br>Partner hubs: <a href="https://research.virginia.edu/initiatives/uva-research-hubs">Physical AI Hub: Intelligence That Moves</a> · <a href="https://research.virginia.edu/initiatives/uva-research-hubs">Quantum Photonics, Materials and Algorithms</a></div>
   </div>
 </footer>
 
